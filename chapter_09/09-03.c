@@ -15,9 +15,12 @@ int main()
 				nMinIndex = j;
 			}
 		}
-		nTmp = aList[i];
-		aList[i] = aList[nMinIndex];
-		aList[nMinIndex] = nTmp;
+		if (nMinIndex != i)
+		{
+			nTmp = aList[i];
+			aList[i] = aList[nMinIndex];
+			aList[nMinIndex] = nTmp;
+		}
 	}
 	//
 	for (i = 0; i < 5; i++)
